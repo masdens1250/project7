@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(74, 222, 255, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(74, 222, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(74, 222, 255, 0); }
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(180deg) scale(0.3);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.window-enter {
+  animation: rotateIn 0.5s ease-out forwards;
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* RTL Support */
+.rtl-content {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Amiri', serif;
+}
+
+.rtl-content .window-title {
+  margin-right: 0.5rem;
+  margin-left: 0;
+  font-family: 'Amiri', serif;
+  letter-spacing: 0;
+}
+
+.rtl-content .window-controls {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* Amiri Font Styles */
+.arabic-text {
+  font-family: 'Amiri', serif;
+  letter-spacing: 0;
+}
+
+/* Specific text size adjustments for Arabic */
+.arabic-text.text-sm {
+  font-size: 1rem;
+}
+
+.arabic-text.text-base {
+  font-size: 1.125rem;
+}
+
+.arabic-text.text-lg {
+  font-size: 1.25rem;
+}
