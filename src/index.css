@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@fontsource/amiri';
+
+:root {
+  direction: rtl;
+  font-family: 'Amiri', serif;
+}
+
+body {
+  @apply bg-gray-50;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.rtl {
+  direction: rtl;
+}
